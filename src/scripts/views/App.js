@@ -22,6 +22,13 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
+    const skipLink = document.querySelector('.skip-link');
+    const mainContent = document.querySelector('#mainContent');
+
+    skipLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      mainContent.focus();
+    });
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }
