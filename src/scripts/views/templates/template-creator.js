@@ -22,17 +22,32 @@ const createRestaurantDetail = (detail) => `
         <span class="category">${category.name}</span>
       `).join('')}
       </li>
-    </div>
-    <div class="detail__desc">
-      <h3>Detail Menu</h3>
-      <li>${detail.menus.foods.map((food) => `
-        <span class="menu">${food.name}</span>
+      </div>
+      <div class="detail__desc">
+        <h3>Detail Menu</h3>
+        <li>${detail.menus.foods.map((food) => `
+          <span class="menu">${food.name}</span>
         `).join('')}
-      </li>
-      <li>${detail.menus.drinks.map((drink) => `
-        <span class="menu">${drink.name}</span>
-      `).join('')}
-      </li>
+        </li>
+        <li>${detail.menus.drinks.map((drink) => `
+          <span class="menu">${drink.name}</span>
+        `).join('')}
+        </li>
+      </div>
+      <div class="detail__desc">
+        <h3>Customer Review</h3>
+        ${detail.customerReviews.map((customer) => `
+          <div class="detail__review">
+            <div class="review__header">
+              <p class="review__name">${customer.name}</p>
+              <p class="review__date">${customer.date}</p>
+            </div>
+            <div class="review__body">
+              ${customer.review}
+            </div>
+          </div>
+        `).join('')}
+      </div>
     </div>
 `;
 
