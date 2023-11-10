@@ -6,7 +6,7 @@ const Favorite = {
     return `
       <div class="container">
         <h2 class="title-container">Favorited Resto</h2>
-        <section id="fav-resto"></section>
+        <section id="resto" class="resto"></section>
       </div>
     `;
   },
@@ -14,7 +14,7 @@ const Favorite = {
   async afterRender() {
     // get fav resto
     const data = await FavResto.getAllResto();
-    const favRestoContainer = document.querySelector('#fav-resto');
+    const favRestoContainer = document.querySelector('#resto');
 
     // if data empty
     if (data.length === 0) {

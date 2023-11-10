@@ -7,6 +7,8 @@ const CONFIG = {
   DB_NAME: 'fav-restaurant',
   DB_VERSION: 1,
   OBJECT_STORE_NAME: 'fav-resto',
+  // CACHE NAME
+  CACHE_NAME: 'RestoCatalogue',
 };
 
 export default CONFIG;
