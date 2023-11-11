@@ -6,9 +6,7 @@ const createRestaurantDetail = (detail) => `
     <div class="detail__info">
       <h3>Information</h3>
       <h4>Address</h4>
-      <p>${detail.address}, ${detail.city}}</p>
-      <h4>Release Date</h4>
-      <p>${detail.release_date}</p>
+      <p>${detail.address}, ${detail.city}</p>
       <h4>Rating</h4>
       <p>${detail.rating}</p>
     </div>
@@ -54,7 +52,7 @@ const createRestaurantDetail = (detail) => `
 const createRestaurantCard = (resto) => `
   <div class="resto-item">
     <div class="resto-item__header">
-      <img class="resto-item__header__poster" alt="${resto.name}" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
+      <img class="resto-item__header__poster" alt="${resto.name}" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
       <div class="resto-item__header__rating">
         <p>⭐️<span class="resto-item__header__rating__score">${resto.rating}</span></p>
       </div>

@@ -1,3 +1,54 @@
+@media screen and (min-width: 320px) {
+  main {
+    padding: 20px;
+    flex: 1;
+  }
+
+  .hero {
+    padding: 150px 0;
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .resto-item__header {
+    height: 150px;
+  }
+
+  .resto-item .resto-item__header .resto-item__header__poster {
+    height: 150px;
+  }
+
+  .resto-item .resto-item__header .resto-item__header__rating {
+    padding: 8px;
+  }
+
+  .resto-item .resto-item__content {
+    padding: 16px;
+  }
+
+  .resto-item .resto-item__content h3 {
+    margin: 0 0 10px 0;
+  }
+
+  .detail {
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .detail__poster {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+
+  .detail__desc h3 {
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 650px) {
   .app-bar {
     grid-template-columns: 1fr auto;

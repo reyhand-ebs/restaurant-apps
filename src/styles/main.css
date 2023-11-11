@@ -15,14 +15,13 @@ body {
   position: absolute;
   top: -80px;
   left: 0;
-  background-color: var(--btn);
-  color: white;
-  padding: 8px;
-  z-index: 10;
+  background-color: #00ffaa;
+  color: black;
+  z-index: 999;
 }
 
 .skip-link:focus {
-  top: 0;
+  top: 0px;
 }
 
 /*
@@ -111,8 +110,9 @@ main {
   background-image: url("../public/images/hero/hero-image_4.jpg");
   background-size: cover;
   background-position: center;
+  display: flex;
   color: #fff;
-  text-align: center;
+  justify-content: center;
   padding: 200px 0;
   position: relative;
   overflow: hidden;
@@ -133,6 +133,7 @@ main {
 .hero h2 {
   font-size: 36px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 /* Custom Resto styles */
@@ -253,7 +254,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 1em;
+  padding: 1em;
   color: var(--btn);
   border-bottom: 1px solid var(--font-color);
 }
