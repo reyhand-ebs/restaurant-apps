@@ -20,6 +20,9 @@ const dbPromise = openDB(DB_NAME, DB_VERSION, {
 const FavRestoIdb = {
   // Get a single restaurant by id
   async getResto(id) {
+    if(!id) {
+      return;
+    }
     // Wait for the database to open
     const db = await dbPromise;
     // Return the restaurant from the object store
@@ -36,6 +39,9 @@ const FavRestoIdb = {
 
   // Add or update a restaurant
   async putResto(resto) {
+    if(!resto.hasOwnProperty('id')) {
+      return;
+    }
     // Wait for the database to open
     const db = await dbPromise;
     // Add or update the restaurant in the object store

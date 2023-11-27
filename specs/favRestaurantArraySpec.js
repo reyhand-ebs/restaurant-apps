@@ -1,6 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable consistent-return */
-import { itActsAsFavoriteRestoModel } from './contract/favRestoContract';
+import { itActsAsFavoriteRestoModel } from "./contract/favRestoContract";
 
 let favoriteRestos = [];
 
@@ -16,7 +16,7 @@ const FavoriteRestoArray = {
     return favoriteRestos;
   },
   putResto(resto) {
-    if (!resto.hasOwnProperty('id')) {
+    if (!resto.hasOwnProperty("id")) {
       return;
     }
 
@@ -31,7 +31,7 @@ const FavoriteRestoArray = {
   },
 };
 
-describe('Favorite resto array contract test', () => {
+describe("Favorite resto array contract test", () => {
   afterEach(() => (favoriteRestos = []));
 
   itActsAsFavoriteRestoModel(FavoriteRestoArray);
