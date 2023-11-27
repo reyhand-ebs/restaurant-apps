@@ -1,5 +1,5 @@
 import LikeButtonInitiator from '../../src/scripts/utils/like-button-initiator';
-import FavRestoIdb from '../../src/scripts/data/resto-idb';
+import FavRestoIdb from '../../src/scripts/data/favrestaurant-idb';
 
 const createLikeButtonInitiatorWithResto = async (restaurant) => {
   await LikeButtonInitiator.init({

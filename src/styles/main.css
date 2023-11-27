@@ -110,7 +110,7 @@ main {
 }
 
 .hero {
-  background-image: url("../public/images/hero/hero-image_4.jpg");
+  background-image: url("../public/images/hero/hero.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

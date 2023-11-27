@@ -1,5 +1,5 @@
-import FavRestoIdb from '../src/scripts/data/resto-idb';
-import * as TestFactories from './helpers/testFactories';
+import FavRestoIdb from '../src/scripts/data/favrestaurant-idb';
+import TestFactories from './helpers/testFactories';
 
 const addLikeButtonContainer = () => {
   document.body.innerHTML = '<div id="likeButtonContainer"></div>';
@@ -16,7 +16,7 @@ describe('Unliking Resto', () => {
   });
 
   it('should display unlike widget when the resto has been liked', async () => {
-    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
+    await TestFactories.createLikeButtonInitiatorWithResto({ id: 1 });
 
     expect(
       document.querySelector('[aria-label="unlike this resto"]'),
@@ -24,7 +24,7 @@ describe('Unliking Resto', () => {
   });
 
   it('should not display unlike widget when the resto has been liked', async () => {
-    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
+    await TestFactories.createLikeButtonInitiatorWithResto({ id: 1 });
 
     expect(
       document.querySelector('[aria-label="like this resto"]'),
@@ -32,7 +32,7 @@ describe('Unliking Resto', () => {
   });
 
   it('should be able to remove liked resto from the list', async () => {
-    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
+    await TestFactories.createLikeButtonInitiatorWithResto({ id: 1 });
 
     document
       .querySelector('[aria-label="unlike this resto"]')
@@ -43,7 +43,7 @@ describe('Unliking Resto', () => {
   });
 
   it('should not throw error if the unliked resto is not in the list', async () => {
-    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
+    await TestFactories.createLikeButtonInitiatorWithResto({ id: 1 });
 
     await FavRestoIdb.deleteResto(1);
     document

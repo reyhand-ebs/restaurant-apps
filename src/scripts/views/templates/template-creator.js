@@ -1,8 +1,9 @@
 import CONFIG from '../../globals/config';
+import 'lazysizes';
 
 const createRestaurantDetail = (detail) => `
   <h2 class="detail__title">${detail.name}</h2>
-    <img class="detail__poster" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" crossorigin="anonymous" alt="${detail.name}" loading="lazy" />
+    <img class="detail__poster lazyload" data-src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" crossorigin="anonymous" alt="${detail.name}" />
     <div class="detail__info">
       <h3>Information</h3>
       <h4>Address</h4>
@@ -52,7 +53,7 @@ const createRestaurantDetail = (detail) => `
 const createRestaurantCard = (resto) => `
   <div class="resto-item">
     <div class="resto-item__header">
-      <img class="resto-item__header__poster" alt="${resto.name}" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" loading="lazy">
+      <img class="resto-item__header__poster lazyload" alt="${resto.name}" crossorigin="anonymous" data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
       <div class="resto-item__header__rating">
         <p>⭐️<span class="resto-item__header__rating__score">${resto.rating}</span></p>
       </div>
