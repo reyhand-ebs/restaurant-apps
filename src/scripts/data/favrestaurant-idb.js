@@ -23,18 +23,12 @@ const FavRestoIdb = {
     if(!id) {
       return;
     }
-    // Wait for the database to open
-    const db = await dbPromise;
-    // Return the restaurant from the object store
-    return db.get(OBJECT_STORE_NAME, id);
+    return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
 
   // Get all restaurants
   async getAllResto() {
-    // Wait for the database to open
-    const db = await dbPromise;
-    // Return all restaurants from the object store
-    return db.getAll(OBJECT_STORE_NAME);
+    return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
 
   // Add or update a restaurant
@@ -42,18 +36,12 @@ const FavRestoIdb = {
     if(!resto.hasOwnProperty('id')) {
       return;
     }
-    // Wait for the database to open
-    const db = await dbPromise;
-    // Add or update the restaurant in the object store
-    return db.put(OBJECT_STORE_NAME, resto);
+    return (await dbPromise).put(OBJECT_STORE_NAME, resto);
   },
 
   // Delete a restaurant by id
   async deleteResto(id) {
-    // Wait for the database to open
-    const db = await dbPromise;
-    // Delete the restaurant from the object store
-    return db.delete(OBJECT_STORE_NAME, id);
+    return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
 };
 

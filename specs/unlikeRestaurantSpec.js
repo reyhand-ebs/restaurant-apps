@@ -1,8 +1,8 @@
 import FavRestoIdb from '../src/scripts/data/favrestaurant-idb';
-import TestFactories from './helpers/testFactories';
+import * as TestFactories from './helpers/testFactories';
 
 const addLikeButtonContainer = () => {
-  document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+  document.body.innerHTML = '<div id="likeButton"></div>';
 };
 
 describe('Unliking Resto', () => {
