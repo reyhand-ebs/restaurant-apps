@@ -1,3 +1,5 @@
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable consistent-return */
 // Import the idb library
 import { openDB } from 'idb';
 // Import the config object
@@ -20,7 +22,7 @@ const dbPromise = openDB(DB_NAME, DB_VERSION, {
 const FavRestoIdb = {
   // Get a single restaurant by id
   async getResto(id) {
-    if(!id) {
+    if (!id) {
       return;
     }
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
@@ -33,7 +35,7 @@ const FavRestoIdb = {
 
   // Add or update a restaurant
   async putResto(resto) {
-    if(!resto.hasOwnProperty('id')) {
+    if (!resto.hasOwnProperty('id')) {
       return;
     }
     return (await dbPromise).put(OBJECT_STORE_NAME, resto);
