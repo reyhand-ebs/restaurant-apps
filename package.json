@@ -5,18 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && node sharp.js",
     "serve": "http-server dist --port 9000",
     "test": "karma start",
     "build-image": "node sharp.js",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "lint": "eslint ./src/scripts"
   },
   "keywords": [],
   "author": "reyhand f142yb158@dicoding.co.id",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
     "@types/imagemin-pngquant": "^8.0.0",
     "babel-loader": "^8.3.0",
     "clean-webpack-plugin": "^4.0.0",
