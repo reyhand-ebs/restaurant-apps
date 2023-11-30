@@ -16,6 +16,8 @@
   "author": "reyhand f142yb158@dicoding.co.id",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
     "@types/imagemin-pngquant": "^8.0.0",
     "babel-loader": "^8.3.0",
     "clean-webpack-plugin": "^4.0.0",
